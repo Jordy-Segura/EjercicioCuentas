@@ -26,7 +26,7 @@ public class EjercicioCuentas {
         
         System.out.println("\nCuenta Corriente:");
         cuentaCorriente.consignar(2000);
-        cuentaCorriente.retirar(8000); // Esto generará un sobregiro
+        cuentaCorriente.retirar(8000); 
         cuentaCorriente.extractoMensual();
         cuentaCorriente.imprimir();
     }
