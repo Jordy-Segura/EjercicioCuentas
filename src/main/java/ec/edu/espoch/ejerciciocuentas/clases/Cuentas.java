@@ -60,5 +60,36 @@ public class Cuentas {
         this.comisionMensual = comisionMensual;
     }
     
+    public void consignar(float cantidad) {
+        saldo += cantidad;
+        consignacion++;
+    }
+
+    public boolean retirar(float cantidad) {
+        if (cantidad <= saldo) {
+            saldo -= cantidad;
+            retiros++;
+            return true;
+        }
+        return false;
+    }
+
+    public void calcularInteresMensual() {
+        float interesMensual = (saldo * (tasaAnual / 100)) / 12;
+        saldo += interesMensual;
+    }
+
+    public void extractoMensual() {
+        calcularInteresMensual();
+        saldo -= comisionMensual;
+    }
+
+    public void imprimir() {
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Comisión Mensual: " + comisionMensual);
+        System.out.println("Número de Consignaciones: " + consignacion);
+        System.out.println("Número de Retiros: " + retiros);
+    }
+
     
 }

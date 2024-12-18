@@ -11,6 +11,6 @@ package ec.edu.espoch.ejerciciocuentas;
 public class EjercicioCuentas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }
